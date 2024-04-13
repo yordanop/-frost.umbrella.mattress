@@ -1,5 +1,5 @@
 :root{
-    --light-text:black;
+    --light-text:#5a0f0f;
     --light-bg:white;
     --light-clr-1: #D0B783;
     --light-clr-2:#BCD2D0;
@@ -20,6 +20,8 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    color: var(--light-text); 
 }
 
 main{
@@ -79,19 +81,31 @@ h1{
 
 #principal label{
     font-size: 1.5rem;
+    font-weight: 500;
     display: block;
     text-align: left;
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
 }
 
-#principal input{
+#principal input, #principal textarea{
     width: 100%;
     display: block;
     text-align: left;
     margin-bottom: 1rem;
+    color: #5a0f0f;
+    background-color: #f8f8e693;
+    border: 0;
+    height: 1.5rem;
 }
+#principal textarea{
+    height: 5rem;
+}
+
 
 #principal button{
     margin-top: 2vh;
+    height: 2rem;
+    width: 100%;
+    border: 0;
 }
