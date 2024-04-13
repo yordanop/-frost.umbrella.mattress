@@ -1,0 +1,96 @@
+:root{
+    --light-text:#5a0f0f;
+    --light-bg:white;
+    --light-clr-1: #D0B783;
+    --light-clr-2:#BCD2D0;
+    --light-clr-3:#F96161;
+    --light-clr-4:#E1E9B7;
+
+    --dark-text:black;
+    --dark-bg:white;
+    --dark-clr-1:white;
+    --dark-clr-2:white;
+    --dark-clr-3:white;
+    --dark-clr-4:white;
+
+    --header-height:9vh;
+    --footer-height:10vh;
+    --content-top-margin: 0.5rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    color: var(--light-text); 
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+header{
+    height: var(--header-height);
+
+    display: block;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 95%;
+    width: 100%;
+    padding-top: calc(var(--footer-height) + var(--content-top-margin) - 1rem);
+    
+}
+
+#content > .blog-post{
+    height: 15%;
+    max-height: 9rem;
+    width: 95%;
+    background-color: #fff5f5bb;
+    margin: var(--content-top-margin);
+    border-radius: 1.5rem;
+}
+
+footer{
+    padding: 1rem 2rem;
+    margin: 1vh;
+    height: var(--footer-height);
+}
+
+div[id*='bg-']{
+    width: 50%;
+    height: calc(50vh - (var(--header-height) + var(--footer-height))/2);
+}
+
+#bg-section1{
+    background: repeating-linear-gradient(-45deg, var(--light-clr-1), var(--light-clr-1) 5vh, var(--light-clr-2) 5vh, var(--light-clr-2) 10vh, var(--light-clr-3) 10vh, var(--light-clr-3) 15vh, var(--light-clr-4)  15vh, var(--light-clr-4)  20vh);
+}
+
+#bg-section2{
+    background: repeating-linear-gradient(45deg, var(--light-clr-2), var(--light-clr-2) 5vh, var(--light-clr-3) 5vh, var(--light-clr-3) 10vh, var(--light-clr-4) 10vh, var(--light-clr-4) 15vh, var(--light-clr-1)  15vh, var(--light-clr-1)  20vh);
+}
+
+
+#bg-section3{
+    background: repeating-linear-gradient(-135deg, var(--light-clr-3), var(--light-clr-3) 5vh, var(--light-clr-4) 5vh, var(--light-clr-4) 10vh, var(--light-clr-1) 10vh, var(--light-clr-1) 15vh, var(--light-clr-2)  15vh, var(--light-clr-2)  20vh);
+}
+
+#bg-section4{
+    background: repeating-linear-gradient(135deg, var(--light-clr-4), var(--light-clr-4) 5vh, var(--light-clr-1) 5vh, var(--light-clr-1) 10vh, var(--light-clr-2) 10vh, var(--light-clr-2) 15vh, var(--light-clr-3)  15vh, var(--light-clr-3)  20vh);
+}
+
