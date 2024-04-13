@@ -14,22 +14,43 @@
     --dark-clr-4:white;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
 main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    
+    
 }
+
 
 h1, #principal{
+    text-align: center;
     position: absolute;
+    margin: auto;
+    left: 25%;
+    width: 50%;
 }
 
+h1{
+    top: 15%;
+}
+
+#principal{
+    top: 30%;
+}
+
+
+
 div[id*='bg-']{
-    
     width: 50%;
-    height: 50%;
-    border: 1rem solid black;
+    height: 50vh;
+    border: 1rem solid red;
 
 }
 
