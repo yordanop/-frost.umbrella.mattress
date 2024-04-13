@@ -1,0 +1,39 @@
+:root{
+    --light-text:black;
+    --light-bg:white;
+    --light-clr-1:rgb(243, 11, 11);
+    --light-clr-2:rgb(23, 8, 235);
+    --light-clr-3:rgb(213, 15, 224);
+    --light-clr-4:rgb(11, 224, 40);
+
+    --dark-text:black;
+    --dark-bg:white;
+    --dark-clr-1:white;
+    --dark-clr-2:white;
+    --dark-clr-3:white;
+    --dark-clr-4:white;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, #principal{
+    position: absolute;
+}
+
+div[id*='bg-']{
+    
+    width: 50%;
+    height: 50%;
+    border: 1rem solid black;
+
+}
+
+
+#section-1 {
+    background: linear-gradient(45deg, var(--light-clr-1), var(--light-clr-2), var(--light-clr-3), var(--light-clr-4)  );
+}
