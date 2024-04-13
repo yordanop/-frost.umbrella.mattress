@@ -1,10 +1,10 @@
 :root{
     --light-text:black;
     --light-bg:white;
-    --light-clr-1:rgb(243, 11, 11);
-    --light-clr-2:rgb(23, 8, 235);
-    --light-clr-3:rgb(213, 15, 224);
-    --light-clr-4:rgb(11, 224, 40);
+    --light-clr-1: #D0B783;
+    --light-clr-2:#BCD2D0;
+    --light-clr-3:#F96161;
+    --light-clr-4:#E1E9B7;
 
     --dark-text:black;
     --dark-bg:white;
@@ -57,7 +57,22 @@ div[id*='bg-']{
     height: calc(50vh - var(--header-height)/2);
 }
 
+#bg-section1{
+    background: repeating-linear-gradient(-45deg, var(--light-clr-1), var(--light-clr-1) 5vh, var(--light-clr-2) 5vh, var(--light-clr-2) 10vh, var(--light-clr-3) 10vh, var(--light-clr-3) 15vh, var(--light-clr-4)  15vh, var(--light-clr-4)  20vh);
 
-#bg-section1 {
-    background: linear-gradient(-45deg, var(--light-clr-1), var(--light-clr-2), var(--light-clr-3), var(--light-clr-4)  );
+}
+
+#bg-section2{
+    background: repeating-linear-gradient(45deg, var(--light-clr-2), var(--light-clr-2) 5vh, var(--light-clr-3) 5vh, var(--light-clr-3) 10vh, var(--light-clr-4) 10vh, var(--light-clr-4) 15vh, var(--light-clr-1)  15vh, var(--light-clr-1)  20vh);
+
+}
+
+#bg-section3{
+    background: repeating-linear-gradient(-135deg, var(--light-clr-3), var(--light-clr-3) 5vh, var(--light-clr-4) 5vh, var(--light-clr-4) 10vh, var(--light-clr-1) 10vh, var(--light-clr-1) 15vh, var(--light-clr-2)  15vh, var(--light-clr-2)  20vh);
+
+}
+
+#bg-section4{
+    background: repeating-linear-gradient(135deg, var(--light-clr-4), var(--light-clr-4) 5vh, var(--light-clr-1) 5vh, var(--light-clr-1) 10vh, var(--light-clr-2) 10vh, var(--light-clr-2) 15vh, var(--light-clr-3)  15vh, var(--light-clr-3)  20vh);
+
 }
