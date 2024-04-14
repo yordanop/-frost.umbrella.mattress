@@ -7,7 +7,7 @@
     --light-clr-4: #E1E9B7;
 
     --dark-text:white;
-    --dark-bg:white;
+    --dark-bg:#000000;
     --dark-clr-1:#11233B;
     --dark-clr-2:#232021;
     --dark-clr-3:#4B473C;
@@ -27,8 +27,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS';
-    color: var(--light-text); 
+    font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS'; 
 }
 
 header{
@@ -36,19 +35,31 @@ header{
     justify-content: flex-end;
     align-items: center;
     height: var(--header-height);
-    background-color: var(--light-bg);
     padding: 0 1vw;
+}
+
+header.light{
+    background-color: var(--light-bg);
+}
+header.dark{
+    background-color: var(--dark-bg);
 }
 
 header button{
     height: var(--button-size);
     width: var(--button-size);
-    background-image: url(../images/dark-light-mode.png);
     background-size: var(--button-size) var(--button-size);
     background-repeat: no-repeat;
-    background-color: var(--light-bg);
     border-radius: 900px;
     border: 0;
+}
+
+header button.dark{
+    background-image: url(../images/dark-light-mode.png);
+}
+
+header button.light{
+    background-image: url(../images/light-dark-mode.png);
 }
 
 main{
@@ -56,7 +67,13 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    
+}
+
+main h1.light{
+    color: var(--light-text);
+}
+main h1.dark{
+    color: var(--dark-text);
 }
 
 div[class*='bg-']{
@@ -81,47 +98,19 @@ div[class*='bg-']{
 }
 
 .bg-section1.dark{
-    background: repeating-linear-gradient(-45deg, black, var(--dark-clr-1) 
-    calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-2) 
-    calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-2) 
-    calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-3) 
-    calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-3) 
-    calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-4)  
-    calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-4)  
-    calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
+    background: repeating-linear-gradient(-45deg, black, var(--dark-clr-1) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-4)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-4)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
 }
 
 .bg-section2.dark{
-    background: repeating-linear-gradient(45deg, black, var(--dark-clr-2) 
-    calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-3) 
-    calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-3) 
-    calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-4) 
-    calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-4) 
-    calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-1)  
-    calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-1)  
-    calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
+    background: repeating-linear-gradient(45deg, black, var(--dark-clr-2) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-1)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-1)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
 }
 
 .bg-section3.dark{
-    background: repeating-linear-gradient(-135deg, black, var(--dark-clr-3) 
-    calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-4) 
-    calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-4) 
-    calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-1) 
-    calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-1) 
-    calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-2)  
-    calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-2)  
-    calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
+    background: repeating-linear-gradient(-135deg, black, var(--dark-clr-3) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-2)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-2)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
 }
 
 .bg-section4.dark{
-    background: repeating-linear-gradient(135deg, black, var(--dark-clr-4) 
-    calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-1) 
-    calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-1) 
-    calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-2) 
-    calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-2) 
-    calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-3)  
-    calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-3)  
-    calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
+    background: repeating-linear-gradient(135deg, black, var(--dark-clr-4) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-3)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-3)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
 }
 
 
@@ -157,16 +146,33 @@ h1{
     margin-left: 0.5rem;
 }
 
+#principal label.light, #principal h2.light{
+    color: var(--light-text);
+}
+
+#principal label.dark, #principal h2.dark{
+    color: var(--dark-text);
+}
+
 #principal input, #principal textarea{
     width: 100%;
     display: block;
     text-align: left;
     margin-bottom: 1rem;
-    color: #5a0f0f;
-    background-color: #f8f8e693;
     border: 0;
     height: 1.5rem;
 }
+
+#principal input.light, #principal textarea.light{
+    color: #5a0f0f;
+    background-color: #f8f8e693;
+}
+
+#principal input.dark, #principal textarea.dark{
+    color: #fff8f8;
+    background-color: #00000093;
+}
+
 #principal textarea{
     height: 5rem;
 }
@@ -177,8 +183,16 @@ h1{
     height: 2rem;
     width: 100%;
     border: 0;
-    background:rgba(255, 172, 172, 0.493);
     font-weight: 600;
     font-size: 1.2rem;
-    
+}
+
+#principal button.light{
+    background:#ffacac7e;
+    color: var(--light-text);
+}
+
+#principal button.dark{
+    background:#b8b8b87e;
+    color: var(--dark-text);
 }
