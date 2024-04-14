@@ -1,10 +1,10 @@
 :root{
-    --light-text:#5a0f0f;
-    --light-bg:white;
+    --light-text: #5a0f0f;
+    --light-bg: #fdf5f0;
     --light-clr-1: #D0B783;
-    --light-clr-2:#BCD2D0;
-    --light-clr-3:#F96161;
-    --light-clr-4:#E1E9B7;
+    --light-clr-2: #BCD2D0;
+    --light-clr-3: #F96161;
+    --light-clr-4: #E1E9B7;
 
     --dark-text:black;
     --dark-bg:white;
@@ -25,7 +25,18 @@
 }
 
 header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     height: var(--header-height);
+    background-color: var(--light-bg);
+    padding: 0 1vw;
+}
+
+header img{
+    max-height: calc(var(--header-height)*0.5);
+
+    
 }
 
 main{
@@ -33,6 +44,7 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 div[id*='bg-']{
