@@ -10,17 +10,31 @@ function addNewPost(){
     contentDiv.classList.add('t-c');
 
     const tittleP = document.createElement('p');
-    const contentP = document.createElement('p');
-    
-    tittleP.textContent = 'Test 1'
-    contentP.textContent = 'Test 1'
+    tittleP.classList.add('title');
+    tittleP.classList.add('light');
 
-    postDiv.append()
+    const contentP = document.createElement('p');
+    contentP.classList.add('content');
+    contentP.classList.add('light');
+    
+    tittleP.textContent = 'Test title';
+    contentP.textContent = 'Test content';
+
+    contentDiv.appendChild(tittleP);
+    contentDiv.appendChild(contentP);
+
+    postDiv.appendChild(contentDiv);
+
+    const userP = document.createElement('p');
+    userP.classList.add('user');
+    userP.classList.add('light');
+
+    userP.textContent = 'Test user';
+
+    postDiv.appendChild(userP)
 
     let postsSection = document.querySelector('#content');
-    // console.log(postsSection)
     postsSection.appendChild(postDiv)
-
 
 }
 
