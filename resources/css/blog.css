@@ -153,10 +153,25 @@ main{
     min-height: 9rem;
     max-height: 9rem;
     width: 95%;
-    background-color: #fff5f5bb;
     margin: var(--content-top-margin);
     border-radius: 1.5rem;
     padding: 1rem;
+}
+
+#content .blog-post.light{
+    background-color: #fff5f5bb;
+}
+
+#content .blog-post.dark{
+    background-color: #00000093;
+}
+
+.blog-post p.light{
+    color: var(--light-text);
+}
+
+.blog-post p.dark{
+    color: var(--dark-text);
 }
 
 .t-c p:nth-child(1){
