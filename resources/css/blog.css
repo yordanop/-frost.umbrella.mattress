@@ -41,11 +41,17 @@ body{
 
 header{
     display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
     height: var(--header-height);
-    display: block;
     z-index: 1;
+}
+
+header.light, footer.light{
+    background-color: var(--light-bg);
+}
+header.dark, footer.dark{
+    background-color: var(--dark-bg);
 }
 
 header h1{
@@ -60,7 +66,11 @@ header h1.dark{
     color: var(--dark-text);
 }
 
-header button{
+header div{
+    width: 15vw;
+}
+
+#mode-change{
     height: var(--button-size);
     width: var(--button-size);
     background-size: var(--button-size) var(--button-size);
@@ -69,11 +79,11 @@ header button{
     border: 0;
 }
 
-header button.dark{
+#mode-change.dark{
     background-image: url(../images/dark-light-mode.png);
 }
 
-header button.light{
+#mode-change.light{
     background-image: url(../images/light-dark-mode.png);
 }
 
@@ -178,4 +188,12 @@ footer p{
 footer p:first-child{
     align-self: center;
 
+}
+
+footer p.light{
+    color: var(--light-text);
+}
+
+footer p.dark{
+    color: var(--dark-text);
 }

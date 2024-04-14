@@ -3,9 +3,6 @@ let lightMode = true;
 
 
 function setToDarkMode(){
-    
-
-    console.log(lightMode)
 
     if(lightMode){
         const pTags = document.querySelectorAll('.light');
@@ -28,7 +25,7 @@ function setToDarkMode(){
         lightMode = true
 
     }
-    console.log(lightMode)
+
 }
 
 buttonChng.addEventListener('click', setToDarkMode);
