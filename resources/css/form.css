@@ -1,0 +1,100 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 1vw;
+}
+
+
+header button.dark{
+    background-image: url(../images/dark-light-mode.png);
+}
+
+header button.light{
+    background-image: url(../images/light-dark-mode.png);
+}
+
+
+h1, #principal{
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 50vw;
+    margin-left: calc(var(--main-items-width)/(-2));
+    width: var(--main-items-width);
+}
+
+h1{
+    top: 15vh;
+    font-size: 3rem;
+}
+
+#principal{
+    top: calc(42vh - var(--header-height));
+}
+
+#principal h2{
+    font-size: 2rem;
+    margin-bottom: 3vh;
+}
+
+#principal label{
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#principal label.light, #principal h2.light{
+    color: var(--light-text);
+}
+
+#principal label.dark, #principal h2.dark{
+    color: var(--dark-text);
+}
+
+#principal input, #principal textarea{
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin-bottom: 1rem;
+    border: 0;
+    height: 1.5rem;
+}
+
+#principal input.light, #principal textarea.light{
+    color: #5a0f0f;
+    background-color: #f8f8e693;
+}
+
+#principal input.dark, #principal textarea.dark{
+    color: #fff8f8;
+    background-color: #00000093;
+}
+
+#principal textarea{
+    height: 5rem;
+}
+
+
+#principal button{
+    margin-top: 2vh;
+    height: 2rem;
+    width: 100%;
+    border: 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+#principal button.light{
+    background:#ffacac7e;
+    color: var(--light-text);
+}
+
+#principal button.dark{
+    background:#b8b8b87e;
+    color: var(--dark-text);
+}

@@ -1,36 +1,8 @@
 :root{
-    --light-text:#5a0f0f;
-    --light-bg:#fdf5f0;
-    --light-clr-1: #D0B783;
-    --light-clr-2:#BCD2D0;
-    --light-clr-3:#F96161;
-    --light-clr-4:#E1E9B7;
-
-    --dark-text:white;
-    --dark-bg:#000000;
-    --dark-clr-1:#11233B;
-    --dark-clr-2:#232021;
-    --dark-clr-3:#4B473C;
-    --dark-clr-4:#060C13;
-
-    --gradient-ref-1:5vh;
-    --gradient-ref-2:10vh;
-    --gradient-ref-3:15vh;
-    --gradient-ref-4:20vh;
-    --gradient-off:1vh;
-
-    --header-height:9vh;
     --footer-updown-padding: 1.5rem;
     --footer-height:calc(4*var(--footer-line-height) + var(--footer-updown-padding) + 7vh);
     --footer-line-height:1rem;
     --content-top-margin: 0.5rem;
-    --button-size:calc(var(--header-height)*0.5);
-}
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS';
 }
 
 body{
@@ -47,23 +19,8 @@ header{
     z-index: 1;
 }
 
-header.light, footer.light{
-    background-color: var(--light-bg);
-}
-header.dark, footer.dark{
-    background-color: var(--dark-bg);
-}
-
 header h1{
     display: inline;
-}
-
-header h1.light{
-    color: var(--light-text);
-}
-
-header h1.dark{
-    color: var(--dark-text);
 }
 
 header div{
@@ -111,50 +68,6 @@ header div{
 
 #mode-change.light{
     background-image: url(../images/light-dark-mode.png);
-}
-
-div[class*='bg-']{
-    width: 50%;
-    height: calc(50vh - (var(--header-height) + var(--footer-height))/2);
-    z-index: -2;
-}
-
-.bg-section1.light{
-    background: repeating-linear-gradient(-45deg, var(--light-clr-1), var(--light-clr-1) var(--gradient-ref-1), var(--light-clr-2) var(--gradient-ref-1), var(--light-clr-2) var(--gradient-ref-2), var(--light-clr-3) var(--gradient-ref-2), var(--light-clr-3) var(--gradient-ref-3), var(--light-clr-4)  var(--gradient-ref-3), var(--light-clr-4)  var(--gradient-ref-4));
-}
-
-.bg-section2.light{
-    background: repeating-linear-gradient(45deg, var(--light-clr-2), var(--light-clr-2) var(--gradient-ref-1), var(--light-clr-3) var(--gradient-ref-1), var(--light-clr-3) var(--gradient-ref-2), var(--light-clr-4) var(--gradient-ref-2), var(--light-clr-4) var(--gradient-ref-3), var(--light-clr-1)  var(--gradient-ref-3), var(--light-clr-1)  var(--gradient-ref-4));
-}
-
-.bg-section3.light{
-    background: repeating-linear-gradient(-135deg, var(--light-clr-3), var(--light-clr-3) var(--gradient-ref-1), var(--light-clr-4) var(--gradient-ref-1), var(--light-clr-4) var(--gradient-ref-2), var(--light-clr-1) var(--gradient-ref-2), var(--light-clr-1) var(--gradient-ref-3), var(--light-clr-2)  var(--gradient-ref-3), var(--light-clr-2)  var(--gradient-ref-4));
-}
-
-.bg-section4.light{
-    background: repeating-linear-gradient(135deg, var(--light-clr-4), var(--light-clr-4) var(--gradient-ref-1), var(--light-clr-1) var(--gradient-ref-1), var(--light-clr-1) var(--gradient-ref-2), var(--light-clr-2) var(--gradient-ref-2), var(--light-clr-2) var(--gradient-ref-3), var(--light-clr-3)  var(--gradient-ref-3), var(--light-clr-3)  var(--gradient-ref-4));
-}
-
-.bg-section1.dark{
-    background: repeating-linear-gradient(-45deg, black, var(--dark-clr-1) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-4)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-4)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
-}
-
-.bg-section2.dark{
-    background: repeating-linear-gradient(45deg, black, var(--dark-clr-2) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-3) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-1)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-1)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
-}
-
-.bg-section3.dark{
-    background: repeating-linear-gradient(-135deg, black, var(--dark-clr-3) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-4) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-2)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-2)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
-}
-
-.bg-section4.dark{
-    background: repeating-linear-gradient(135deg, black, var(--dark-clr-4) calc(var(--gradient-ref-1) - var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-1) + var(--gradient-off)), var(--dark-clr-1) calc(var(--gradient-ref-2) - var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-2) + var(--gradient-off)), var(--dark-clr-2) calc(var(--gradient-ref-3) - var(--gradient-off)), var(--dark-clr-3)  calc(var(--gradient-ref-3) + var(--gradient-off)), var(--dark-clr-3)  calc(var(--gradient-ref-4) - var(--gradient-off)), black 24vh);
-}
-main{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
 #content{
