@@ -1,7 +1,7 @@
 :root{
     --footer-updown-padding: 1.5rem;
-    --footer-height:calc(4*var(--footer-line-height) + var(--footer-updown-padding) + 7vh);
     --footer-line-height:1rem;
+    --footer-height:calc(4*var(--footer-line-height) + var(--footer-updown-padding) + 7vh);
     --content-top-margin: 0.5rem;
 }
 
@@ -81,7 +81,7 @@ header div{
     flex-direction: column;
     height: 95%;
     width: 100%;
-    padding-top: calc(3*var(--footer-height) - 2.2*var(--footer-height));
+    padding-top: 2rem;
     overflow-y: auto;
     scrollbar-color: #d1172e #fff;
     z-index: 0;

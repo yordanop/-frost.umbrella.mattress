@@ -46,4 +46,4 @@ function changePage(event){
 
 buttonBack.addEventListener('click', changePage);
 
-buttonAdd.addEventListener('click', addNewPost);
+buttonAdd.addEventListener('click', createTemplatePost);
