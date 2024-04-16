@@ -12,15 +12,19 @@ body{
 }
 
 header{
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: var(--header-height);
     z-index: 1;
 }
 
 header h1{
     display: inline;
+}
+
+header h1.light{
+    color: var(--light-text);
+}
+header h1.dark{
+    color: var(--dark-text);
 }
 
 header div{

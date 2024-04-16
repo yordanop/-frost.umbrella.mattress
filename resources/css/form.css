@@ -1,11 +1,7 @@
 header{
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
-    height: var(--header-height);
     padding: 0 1vw;
 }
-
 
 header button.dark{
     background-image: url(../images/dark-light-mode.png);
@@ -14,7 +10,6 @@ header button.dark{
 header button.light{
     background-image: url(../images/light-dark-mode.png);
 }
-
 
 h1, #principal{
     position: absolute;

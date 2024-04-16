@@ -21,29 +21,24 @@
         
         <div id="principal">
             <h2 class="light">What's on your mind?</h2>
-            <form method="POST">
+            <form method="POST" action="destinationURL">
                 <div>
-                    <label class="light" for="">Username</label>
-                    <input class="light" type="text">
+                    <label class="light" for="usernameInput">Username</label>
+                    <input class="light" type="text" name="usernameInput", id="usernameInput">
                 </div>
                 <div>
-                    <label class="light" for="">Tittle</label>
-                    <input class="light" type="text">
+                    <label class="light" for="titleInput">Tittle</label>
+                    <input class="light" type="text" name="titleInput", id="titleInput">
                 </div>
                 <div>
-                    <label class="light" for="">Content</label>
-                    <textarea class="light" name="" id=""  rows="5"></textarea>
+                    <label class="light" for="contentInput">Content</label>
+                    <textarea class="light" name="contentInput" id="contentInput"  rows="5"></textarea>
                 </div>
-                <a href="./blog.html">
-                    <button class="light">Submit</button>
-                </a>
-                
-                </form>
+                <button class="light" id="user-submit">Submit</button>
+            </form>
         </div>
     </main>
-    
-    
-
+    <script src="./resources/js/form.js"></script>
     <script src="./resources/js/logic.js"></script>
 </body>
 </html>

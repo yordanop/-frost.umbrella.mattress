@@ -30,6 +30,11 @@
     font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS'; 
 }
 
+header{
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+}
 
 header.light, footer.light{
     background-color: var(--light-bg);

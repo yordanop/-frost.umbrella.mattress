@@ -1,6 +1,7 @@
 let buttonAdd = document.querySelector('#test');
+let buttonBack = document.querySelector('#back');
 
-function addNewPost(){
+function createTemplatePost(){
     const postDiv = document.createElement('div');
     
     postDiv.classList.add('blog-post');
@@ -37,5 +38,12 @@ function addNewPost(){
     postsSection.appendChild(postDiv)
 
 }
+
+function changePage(event){
+    event.preventDefault()
+    location.href = "index.html";
+}
+
+buttonBack.addEventListener('click', changePage);
 
 buttonAdd.addEventListener('click', addNewPost);
