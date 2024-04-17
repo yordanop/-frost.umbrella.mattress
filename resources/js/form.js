@@ -12,10 +12,6 @@ function retrieveHistoric(){
     }
 }
 
-function changePage(){
-    location.href = "blog.html";
-}
-
 function retrieveNewPost(event){
     event.preventDefault()
     const userRetrievedData = userNameInput.value;
@@ -36,7 +32,11 @@ function retrieveNewPost(event){
 
 function updateLocalStorage() {
     localStorage.setItem('postsHistoric', JSON.stringify(allPosts))
-  }
+}
+
+function changePage(){
+    location.href = "blog.html";
+}
 
 function init(){
     retrieveHistoric()

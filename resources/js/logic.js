@@ -1,5 +1,5 @@
 let buttonChng = document.querySelector('#mode-change');
-let lightMode = true;
+
 
 
 function setToDarkMode(){
@@ -28,5 +28,8 @@ function setToDarkMode(){
 
 }
 
+function sdfsdf(){
+    let lightMode = true;
+}
 buttonChng.addEventListener('click', setToDarkMode);
 
