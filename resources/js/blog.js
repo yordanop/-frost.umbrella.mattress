@@ -1,7 +1,33 @@
 let buttonAdd = document.querySelector('#test');
 let buttonBack = document.querySelector('#back');
 
+function loadFromLocalStorage() {
+    
+const storedData = JSON.parse(localStorage.getItem('postsHistoric'));
+
+    
+if (storedData) {
+    allPosts = storedData;
+
+    allPosts.posts.forEach(postToPost => {
+        let postDivEmpty = createTemplatePost();
+
+        let postTitle = postDivEmpty.querySelector('.title') 
+        let postUser = postDivEmpty.querySelector('.user') 
+        let postContent = postDivEmpty.querySelector('.content') 
+        postTitle.textContent = postToPost.titleData;
+        postUser.textContent = postToPost.userData;
+        postContent.textContent = postToPost.contentData;
+       
+
+        let postsSection = document.querySelector('#content');
+        postsSection.appendChild(postDivEmpty);
+    });
+}
+}
+
 function createTemplatePost(){
+
     const postDiv = document.createElement('div');
     
     postDiv.classList.add('blog-post');
@@ -34,8 +60,7 @@ function createTemplatePost(){
 
     postDiv.appendChild(userP)
 
-    let postsSection = document.querySelector('#content');
-    postsSection.appendChild(postDiv)
+    return postDiv
 
 }
 
@@ -46,4 +71,4 @@ function changePage(event){
 
 buttonBack.addEventListener('click', changePage);
 
-buttonAdd.addEventListener('click', createTemplatePost);
+loadFromLocalStorage()
