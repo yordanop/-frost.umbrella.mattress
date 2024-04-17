@@ -1,14 +1,33 @@
-let buttonSubmit = document.querySelector('#user-submit');
-let userNameInput = document.querySelector('#usernameInput');
-let titleInput = document.querySelector('#titleInput');
-let contentInput = document.querySelector('#contentInput');
+const buttonSubmit = document.querySelector('#user-submit');
+const userNameInput = document.querySelector('#usernameInput');
+const titleInput = document.querySelector('#titleInput');
+const contentInput = document.querySelector('#contentInput');
 
-const allPosts = []
+let allPosts = {posts : []};
 
-
-function changePage(event){
-    event.preventDefault()
+function changePage(){
+    
+    retrieveNewPost();
     location.href = "blog.html";
 }
 
-buttonSubmit.addEventListener('click', changePage);
+function retrieveNewPost(event){
+    event.preventDefault()
+    const userRetrievedData = userNameInput.value;
+    const titleRetrievedData = titleInput.value;
+    const contentRetrievedData = contentInput.value;
+    if(userRetrievedData && titleRetrievedData && contentRetrievedData){
+
+        allPosts.posts.push({
+            userData : userRetrievedData,
+            titleData : titleRetrievedData,
+            contentData : contentRetrievedData
+        })
+    }else{
+        alert('Please fill all the fields.');
+    }
+    console.log(allPosts);
+
+}
+
+buttonSubmit.addEventListener('click', retrieveNewPost);
