@@ -3,7 +3,10 @@ const userNameInput = document.querySelector('#usernameInput');
 const titleInput = document.querySelector('#titleInput');
 const contentInput = document.querySelector('#contentInput');
 
-let allPosts = {posts : []};
+let allPosts = {
+    posts : [], 
+    actMode:[]
+};
 
 function retrieveHistoric(){
     const storedData = JSON.parse(localStorage.getItem('postsHistoric'))
@@ -23,11 +26,11 @@ function retrieveNewPost(event){
             titleData : titleRetrievedData,
             contentData : contentRetrievedData
         })
+        updateLocalStorage();
+        changePage();
     }else{
         alert('Please fill all the fields.');
     }
-    updateLocalStorage();
-    changePage();
 }
 
 function updateLocalStorage() {
