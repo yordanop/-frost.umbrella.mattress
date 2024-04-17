@@ -5,7 +5,7 @@ const contentInput = document.querySelector('#contentInput');
 
 let allPosts = {
     posts : [], 
-    actMode:[]
+    actMode:['']
 };
 
 function retrieveHistoric(){
