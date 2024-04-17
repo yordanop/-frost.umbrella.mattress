@@ -5,9 +5,14 @@ const contentInput = document.querySelector('#contentInput');
 
 let allPosts = {posts : []};
 
+function retrieveHistoric(){
+    const storedData = JSON.parse(localStorage.getItem('postsHistoric'))
+    if(storedData){
+        allPosts = storedData;
+    }
+}
+
 function changePage(){
-    
-    retrieveNewPost();
     location.href = "blog.html";
 }
 
@@ -17,7 +22,6 @@ function retrieveNewPost(event){
     const titleRetrievedData = titleInput.value;
     const contentRetrievedData = contentInput.value;
     if(userRetrievedData && titleRetrievedData && contentRetrievedData){
-
         allPosts.posts.push({
             userData : userRetrievedData,
             titleData : titleRetrievedData,
@@ -26,8 +30,18 @@ function retrieveNewPost(event){
     }else{
         alert('Please fill all the fields.');
     }
-    console.log(allPosts);
+    updateLocalStorage();
+    changePage();
+}
+
+function updateLocalStorage() {
+    localStorage.setItem('postsHistoric', JSON.stringify(allPosts))
+  }
+
+function init(){
+    retrieveHistoric()
+    buttonSubmit.addEventListener('click', retrieveNewPost);
 
 }
 
-buttonSubmit.addEventListener('click', retrieveNewPost);
+init();
