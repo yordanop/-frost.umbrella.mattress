@@ -1,6 +1,6 @@
 :root{
     --light-text: #5a0f0f;
-    --light-bg: #fdf5f0;
+    --light-bg: #e9ce94;
     --light-clr-1: #D0B783;
     --light-clr-2: #BCD2D0;
     --light-clr-3: #F96161;
@@ -24,12 +24,14 @@
     --button-size:calc(var(--header-height)*0.5);
 }
 
+/* Styling basics for both pages */
 *{
     box-sizing: border-box;
     margin: 0;
     font-family: Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS'; 
 }
 
+/* Styling header */
 header{
     display: flex;
     align-items: center;
@@ -52,6 +54,15 @@ header button{
     border: 0;
 }
 
+/* Setting both cases for button */
+#mode-change.dark{
+    background-image: url(../images/dark-light-mode.png);
+}
+
+#mode-change.light{
+    background-image: url(../images/light-dark-mode.png);
+}
+
 main{
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +82,7 @@ div[class*='bg-']{
     height: calc(50vh - var(--header-height)/2);
 }
 
+/* Creates the pattern for the foursections of the background */
 .bg-section1.light{
     background: repeating-linear-gradient(-45deg, var(--light-clr-1), var(--light-clr-1) var(--gradient-ref-1), var(--light-clr-2) var(--gradient-ref-1), var(--light-clr-2) var(--gradient-ref-2), var(--light-clr-3) var(--gradient-ref-2), var(--light-clr-3) var(--gradient-ref-3), var(--light-clr-4)  var(--gradient-ref-3), var(--light-clr-4)  var(--gradient-ref-4));
 }

@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
 }
-
+/* Styling header */
 header{
     justify-content: space-between;
     padding-left: 1rem;
@@ -32,6 +32,7 @@ header div{
     width: 30vw;
 }
 
+/* Styling the buttons sections and buttons */
 #buttons{
     display: flex;
     flex-direction: row-reverse;
@@ -67,14 +68,9 @@ header div{
     margin-right:  1.5vw;
 }
 
-#mode-change.dark{
-    background-image: url(../images/dark-light-mode.png);
-}
 
-#mode-change.light{
-    background-image: url(../images/light-dark-mode.png);
-}
 
+/* Styling the section that will contain the posts */
 #content{
     position: absolute;
     display: flex;
@@ -130,7 +126,7 @@ header div{
 .blog-post .user{
     font-size: 0.85rem;
 }
-
+/* Styling footer */
 footer{
     display: flex;
     flex-direction: column;

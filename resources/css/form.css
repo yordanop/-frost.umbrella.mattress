@@ -1,15 +1,10 @@
+/* Stuling header */
 header{
     justify-content: flex-end;
     padding: 0 1vw;
 }
 
-header button.dark{
-    background-image: url(../images/dark-light-mode.png);
-}
-
-header button.light{
-    background-image: url(../images/light-dark-mode.png);
-}
+/* Styling the section with the form and the header */
 
 h1, #principal{
     position: absolute;
