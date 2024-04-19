@@ -8,6 +8,7 @@ let allPosts = {
     actMode:['']
 };
 
+// function to set the info from local storage to allPosts object
 function retrieveHistoric(){
     const storedData = JSON.parse(localStorage.getItem('postsHistoric'))
     if(storedData){
@@ -15,6 +16,7 @@ function retrieveHistoric(){
     }
 }
 
+// function to set the new posts info in allPosts object and save it in the local storage
 function retrieveNewPost(event){
     event.preventDefault()
     const userRetrievedData = userNameInput.value;
@@ -26,6 +28,7 @@ function retrieveNewPost(event){
             titleData : titleRetrievedData,
             contentData : contentRetrievedData
         })
+        // when the new info is in the object nex step is to update the local storage and send to the posts page
         updateLocalStorage();
         changePage();
     }else{
@@ -33,14 +36,17 @@ function retrieveNewPost(event){
     }
 }
 
+// send the allposts info to the local storage
 function updateLocalStorage() {
     localStorage.setItem('postsHistoric', JSON.stringify(allPosts))
 }
 
+// function to change to next page
 function changePage(){
     location.href = "blog.html";
 }
 
+// function that initiliza
 function init(){
     retrieveHistoric()
     buttonSubmit.addEventListener('click', retrieveNewPost);

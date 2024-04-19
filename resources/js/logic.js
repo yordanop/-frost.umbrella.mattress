@@ -1,5 +1,6 @@
 let buttonChng = document.querySelector('#mode-change');
 
+// function to get form local storage what was the last mode that was set
 function retrieveHistoric(){
     const storedData = JSON.parse(localStorage.getItem('postsHistoric'))
     if(storedData){
@@ -12,6 +13,7 @@ function retrieveHistoric(){
     }
 }
 
+// function that checks the mode set and if it needs to be changed
 function checkMode(event){
     if (event){
         let actMode = allPosts.actMode;
@@ -28,10 +30,12 @@ function checkMode(event){
     }
 }
 
+// function that will safe any change of mode to the local storage
 function updateLocalStorage() {
     localStorage.setItem('postsHistoric', JSON.stringify(allPosts))
 }
 
+// function that search all elements with the light or dark mode to change them
 function changeMode(){
     let actMode = allPosts.actMode;
     let actButtonClass = document.querySelector('#mode-change').className;
@@ -56,6 +60,7 @@ function changeMode(){
 
 }
 
+// function that initiliza
 function init(){
     retrieveHistoric();
     updateLocalStorage();
